@@ -22,7 +22,7 @@ class Player
     public:
         void setName(string player1)
         {
-            player1 = name;
+            name = player1;
         }
         string getName()
         {
@@ -42,8 +42,7 @@ class Player
         {
             strength = force;
         }
-
-        int strength()
+        int getstrength()
         {
             return strength;
         }
@@ -63,10 +62,17 @@ int main()
 {
     Player player1;
     player1.setName("knight");
+   
     player1.setLife(100);
+
+    cout << player1.getLife();
+
     player1.setStrength(65);
 
-    show
+    cout << player1.getstrength();
 
+    player1.modifyPointsLife(5);
+    player1.modifyStrength(3);
 
+    return 0;
 }
